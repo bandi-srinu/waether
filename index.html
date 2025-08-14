@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-teal-400 min-h-screen flex flex-col items-center justify-start p-4">
+  <div class="w-full max-w-2xl mt-10">
+    <header class="text-white text-center mb-8">
+      <h1 class="text-4xl font-bold">☁️ Weather Dashboard</h1>
+      <p class="text-lg mt-2">Get current weather and 5-day forecast 🌦️</p>
+    </header>
+
+    <section class="mb-6">
+      <div class="flex gap-2">
+        <input id="citySearch" type="text" placeholder="Enter city..." class="flex-1 p-2 rounded-md border border-gray-300 focus:outline-none" />
+        <button id="searchButton" class="bg-white text-blue-600 font-semibold px-4 py-2 rounded-md hover:bg-blue-100 transition">Search</button>
+      </div>
+    </section>
+
+    <section id="loadingState" class="hidden text-center my-4"></section>
+    <section id="errorState" class="hidden text-center my-4"></section>
+    <section id="weatherDisplay" class="hidden mb-6"></section>
+    <section id="forecastSection" class="hidden">
+      <h3 class="text-white text-xl font-semibold mb-4">📅 5-Day Forecast</h3>
+      <div id="forecastContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+    </section>
+  </div>
+</body>
+</html>
